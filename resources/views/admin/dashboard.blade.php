@@ -24,7 +24,7 @@
                         <i class="icon-user-follow success font-large-2 float-left"></i>
                       </div>
                       <div class="media-body text-right">
-                        <h3>278</h3>
+                        <h3>{{$mhsL + $mhsP}}</h3>
                         <span>Mahasiswa Aktif</span>
                       </div>
                     </div>
@@ -41,7 +41,7 @@
                         <i class="icon-user warning font-large-2 float-left"></i>
                       </div>
                       <div class="media-body text-right">
-                        <h3>156</h3>
+                        <h3>{{$mhsL}}</h3>
                         <span>Mahasiswa</span>
                       </div>
                     </div>
@@ -58,7 +58,7 @@
                         <i class="icon-user-female danger font-large-2 float-left"></i>
                       </div>
                       <div class="media-body text-right">
-                        <h3>200</h3>
+                        <h3>{{$mhsP}}</h3>
                         <span>Mahasiswi</span>
                       </div>
                     </div>
@@ -75,7 +75,7 @@
                         <i class="icon-graduation primary font-large-2 float-left"></i>
                       </div>
                       <div class="media-body text-right">
-                        <h3>423</h3>
+                        <h3>{{$mhsTotal}}</h3>
                         <span>Total Mahasiswa</span>
                       </div>
                     </div>
@@ -92,8 +92,8 @@
                   <div class="card-body">
                     <div class="media d-flex">
                       <div class="media-body text-left">
-                        <h3 class="danger">278</h3>
-                        <span>Kedokteran</span>
+                        <h3 class="danger">{{$dosenL + $dosenP}}</h3>
+                        <span>Dosen Aktif</span>
                       </div>
                       <div class="align-self-center">
                         <i class="bi bi-heart-pulse danger font-large-2 float-right"></i>
@@ -109,8 +109,8 @@
                   <div class="card-body">
                     <div class="media d-flex">
                       <div class="media-body text-left">
-                        <h3 class="success">156</h3>
-                        <span>Ilmu Kesehatan</span>
+                        <h3 class="success">{{$dosenL}}</h3>
+                        <span>Dosen Laki-laki</span>
                       </div>
                       <div class="align-self-center">
                         <i class="bi bi-hospital success font-large-2 float-right"></i>
@@ -127,8 +127,8 @@
                   <div class="card-body">
                     <div class="media d-flex">
                       <div class="media-body text-left">
-                        <h3 class="warning">64.89 %</h3>
-                        <span>Teknik</span>
+                        <h3 class="warning">{{$dosenP}}</h3>
+                        <span>Dosen Perempuan</span>
                       </div>
                       <div class="align-self-center">
                         <i class="bi bi-database-add warning font-large-2 float-right"></i>
@@ -144,8 +144,8 @@
                   <div class="card-body">
                     <div class="media d-flex">
                       <div class="media-body text-left">
-                        <h3 class="primary">423</h3>
-                        <span>Ekonomi & Bisnis</span>
+                        <h3 class="primary">{{$dosenTotal}}</h3>
+                        <span>Total Dosen</span>
                       </div>
                       <div class="align-self-center">
                         <i class="bi bi-currency-dollar primary font-large-2 float-right"></i>
@@ -157,7 +157,7 @@
             </div>
           </div>
         
-          <div class="row">
+          {{-- <div class="row">
             <div class="col-xl-3 col-sm-6 col-12">
               <div class="card">
                 <div class="card-content">
@@ -219,8 +219,30 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
         </section>
+        
+        <div class="row">
+          {{-- <div class="col-xl-12 col-md-12">
+            <div class="card overflow-hidden">
+              <div class="card-content">
+                <div class="card-body cleartfix">
+                    {!! $TopTrend->container() !!}
+                </div>
+              </div>
+            </div>
+          </div> --}}
+      
+          <div class="col-xl-12 col-md-12">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-body cleartfix">
+                    {!! $Kelulusan->container() !!}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         
         <div class="row">
             <div class="col-xl-12 col-md-12">
@@ -235,29 +257,9 @@
         </div>
 
         <section id="stats-subtitle">
-        <div class="row">
-          <div class="col-xl-6 col-md-12">
-            <div class="card overflow-hidden">
-              <div class="card-content">
-                <div class="card-body cleartfix">
-                    {!! $TopTrend->container() !!}
-                </div>
-              </div>
-            </div>
-          </div>
+        
       
-          <div class="col-xl-6 col-md-12">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-body cleartfix">
-                    {!! $Kelulusan->container() !!}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <div class="row">
+        {{-- <div class="row">
           <div class="col-xl-6 col-md-12">
             <div class="card">
               <div class="card-content">
@@ -297,37 +299,17 @@
               </div>
             </div>
           </div>
-
-          {{-- <div class="col-xl-6 col-md-12">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-body cleartfix">
-                  {!! $AreaChart->container() !!}
-                </div>
-              </div>
-            </div>
-          </div> --}}
-
-          {{-- <div class="col-xl-6 col-md-12">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-body cleartfix">
-                  {!! $BarChart->container() !!}
-                </div>
-              </div>
-            </div>
-          </div> --}}
-        </div>
+        </div> --}}
       </section>
     </div>
 
-    <script src="{{ $TopTrend->cdn() }}"></script>
-    {{ $TopTrend->script() }}
+    {{-- <script src="{{ $TopTrend->cdn() }}"></script>
+    {{ $TopTrend->script() }} --}}
 
     <script src="{{ $Kelulusan->cdn() }}"></script>
     {{ $Kelulusan->script() }}
 
-    <script src="{{ $DonutChart->cdn() }}"></script>
+    {{-- <script src="{{ $DonutChart->cdn() }}"></script>
     {{ $DonutChart->script() }}
 
     <script src="{{ $RadialChart->cdn() }}"></script>
@@ -337,14 +319,14 @@
     {{ $PolarChart->script() }}
 
     <script src="{{ $LineChart->cdn() }}"></script>
-    {{ $LineChart->script() }}
+    {{ $LineChart->script() }} --}}
 
     <script src="{{ $AreaChart->cdn() }}"></script>
     {{ $AreaChart->script() }}
 
-    <script src="{{ $BarChart->cdn() }}"></script>
+    {{-- <script src="{{ $BarChart->cdn() }}"></script>
     {{ $BarChart->script() }}
 
     <script src="{{ $HorizontalChart->cdn() }}"></script>
-    {{ $HorizontalChart->script() }}
+    {{ $HorizontalChart->script() }} --}}
 </x-app-layout>
