@@ -60,13 +60,6 @@ class MahasiswaController extends Controller
         ]);
     }
 
-    public function getAllData(){
-        $products = Mahasiswa_m::take(10)->get();
-        return response()->json([
-            'products' => $products
-        ]);
-    }
-
     public function getData($id){
         $mahasiswa = Mahasiswa_m::findOrFail($id);
 
