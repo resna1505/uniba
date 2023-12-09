@@ -96,7 +96,7 @@
                         <span>Dosen Aktif</span>
                       </div>
                       <div class="align-self-center">
-                        <i class="bi bi-heart-pulse danger font-large-2 float-right"></i>
+                        <i class="icon-user-follow danger font-large-2 float-right"></i>
                       </div>
                     </div>
                   </div>
@@ -113,7 +113,7 @@
                         <span>Dosen Laki-laki</span>
                       </div>
                       <div class="align-self-center">
-                        <i class="bi bi-hospital success font-large-2 float-right"></i>
+                        <i class="icon-user-following success font-large-2 float-right"></i>
                       </div>
                     </div>
                   </div>
@@ -131,7 +131,7 @@
                         <span>Dosen Perempuan</span>
                       </div>
                       <div class="align-self-center">
-                        <i class="bi bi-database-add warning font-large-2 float-right"></i>
+                        <i class="icon-user-unfollow warning font-large-2 float-right"></i>
                       </div>
                     </div>
                   </div>
@@ -148,7 +148,7 @@
                         <span>Total Dosen</span>
                       </div>
                       <div class="align-self-center">
-                        <i class="bi bi-currency-dollar primary font-large-2 float-right"></i>
+                        <i class="icon-user primary font-large-2 float-right"></i>
                       </div>
                     </div>
                   </div>
