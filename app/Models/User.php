@@ -20,6 +20,7 @@ class User extends Authenticatable
     use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    protected $table ="user";
 
     // public function hasRole($role)
     // {
@@ -52,7 +53,7 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name', 'email', 'password','regist_id'
+        'ID', 'NAMA', 'PASSWORD'
     ];
 
     /**

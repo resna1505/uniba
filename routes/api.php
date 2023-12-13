@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('register', [AuthController::class, 'register']);
-Route::post('login', [AuthController::class, 'login']);
+Route::post('login-staff', [AuthController::class, 'loginStaff']);
+Route::post('login-mahasiswa', [AuthController::class, 'loginMahasiswa']);
+Route::post('login-dosen', [AuthController::class, 'loginDosen']);
 
 
 Route::group(
