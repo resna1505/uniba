@@ -20,7 +20,7 @@ class User extends Authenticatable
     use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
-    protected $table ="user";
+    protected $table ="users";
 
     // public function hasRole($role)
     // {
